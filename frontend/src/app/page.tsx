@@ -10,19 +10,19 @@ export default async function Home() {
             Student Data
           </div>
           <div className="flex w-full gap-4">
-            {data.map((val: any) => (
+            {data.map((val: any, i: number) => (
               <div
-                key={val?.id}
+                key={`${i}-${val.id}`}
                 className="border border-gray-300 rounded-lg shadow-md p-4 bg-white hover:shadow-lg transition-shadow duration-200 w-64 flex flex-col gap-2"
               >
                 <div className="text-lg font-semibold text-gray-800">
                   Nama: {val.name}
                 </div>
                 <div className="text-sm text-gray-600">
-                  Alamat: {val.address}
+                  Email: {val.email}
                 </div>
                 <div className="text-sm text-gray-600">
-                  Phone Number: {val.phone}
+                  Alamat: {val.address}
                 </div>
               </div>
             ))}
